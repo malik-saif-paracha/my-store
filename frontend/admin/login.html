@@ -30,56 +30,67 @@
       </div>
       <div class="form-group">
         <label for="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="••••••••"
-          autocomplete="current-password"
-          required
-        />
+        <div class="pw-wrap">
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="••••••••"
+            autocomplete="current-password"
+            required
+          />
+          <button type="button" id="toggle-pw" class="pw-eye" aria-label="Show password">&#128065;</button>
+        </div>
       </div>
       <button type="submit" class="login-btn" id="login-btn">Sign In</button>
     </form>
-
-    <p style="text-align:center;margin-top:20px;font-size:0.85rem;color:#636e72;">
-      Default credentials: <strong>admin</strong> / <strong>admin123</strong>
-    </p>
   </div>
 
-  <script>
-    const ADMIN_API = 'http://localhost:5000/api';
+  <style>
+    .pw-wrap { position: relative; }
+    .pw-wrap input { padding-right: 44px; width: 100%; box-sizing: border-box; }
+    .pw-eye {
+      position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+      background: none; border: none; cursor: pointer; font-size: 1.1rem;
+      color: #636e72; padding: 0; line-height: 1;
+    }
+    .pw-eye:focus { outline: none; }
+  </style>
 
-    // Redirect if already logged in
+  <script>
+    const ADMIN_CREDS = { username: 'malik.saif@cities406', password: 'saif.cities406' };
+
     if (localStorage.getItem('adminToken')) {
       window.location.href = 'dashboard.html';
     }
 
-    document.getElementById('login-form').addEventListener('submit', async (e) => {
+    document.getElementById('toggle-pw').addEventListener('click', function () {
+      var pw = document.getElementById('password');
+      if (pw.type === 'password') {
+        pw.type = 'text';
+        this.innerHTML = '&#128064;';
+      } else {
+        pw.type = 'password';
+        this.innerHTML = '&#128065;';
+      }
+    });
+
+    document.getElementById('login-form').addEventListener('submit', function (e) {
       e.preventDefault();
-      const btn = document.getElementById('login-btn');
-      const errorEl = document.getElementById('login-error');
+      var btn = document.getElementById('login-btn');
+      var errorEl = document.getElementById('login-error');
       errorEl.style.display = 'none';
       btn.disabled = true;
       btn.textContent = 'Signing in…';
 
-      const username = document.getElementById('username').value.trim();
-      const password = document.getElementById('password').value;
+      var username = document.getElementById('username').value.trim();
+      var password = document.getElementById('password').value;
 
-      try {
-        const res = await fetch(`${ADMIN_API}/admin/login`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ username, password }),
-        });
-        const data = await res.json();
-
-        if (!res.ok) throw new Error(data.message || 'Login failed');
-
-        localStorage.setItem('adminToken', data.token);
+      if (username === ADMIN_CREDS.username && password === ADMIN_CREDS.password) {
+        localStorage.setItem('adminToken', 'admin-session');
         window.location.href = 'dashboard.html';
-      } catch (err) {
-        errorEl.textContent = err.message;
+      } else {
+        errorEl.textContent = 'Invalid username or password.';
         errorEl.style.display = 'block';
         btn.disabled = false;
         btn.textContent = 'Sign In';
