@@ -207,6 +207,7 @@ DELETE /api/orders/:id                # Delete order
    - Main app: http://localhost:8000
    - Admin: http://localhost:8000/admin.html
    - Admin Login: use the admin credentials you configure (no default credentials)
+   - Configure them in backend settings (for example, `backend/.env` with `ADMIN_USERNAME` and `ADMIN_PASSWORD`) before launching
 
 ### Adding Products:
 

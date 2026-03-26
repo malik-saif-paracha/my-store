@@ -176,6 +176,7 @@ Server is running on http://localhost:5000
 
 **URL**: http://localhost:8000/admin.html
 - Configure your own admin username and password before first use (no default credentials are provided).
+- Set them in your backend configuration (for example, `backend/.env` with `ADMIN_USERNAME` and `ADMIN_PASSWORD`) before starting the servers.
 
 ## How to Use
 

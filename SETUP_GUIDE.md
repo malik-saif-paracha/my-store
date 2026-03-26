@@ -179,6 +179,7 @@ Available on:
 2. **Admin Panel**
    - Go to: http://localhost:8000/admin.html
    - Configure your own admin username and password before first use (no default credentials)
+   - Set them in backend configuration (e.g., create `backend/.env` with `ADMIN_USERNAME` and `ADMIN_PASSWORD`) before starting
 
 ### Initial Setup - Add Sample Products
 

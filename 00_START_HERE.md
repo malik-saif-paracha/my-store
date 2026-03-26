@@ -80,6 +80,7 @@ Open: http://localhost:8000
 ## 🎯 TESTING (5 minutes)
 
 ### 1. Admin Setup
+- Configure admin credentials in backend settings (e.g., `backend/.env` with `ADMIN_USERNAME` and `ADMIN_PASSWORD`)
 - Go to: http://localhost:8000/admin.html
 - Login with your configured admin credentials
 - Click "Products" tab
@@ -192,6 +193,7 @@ Then open: http://localhost:8000
 **Admin Panel:**
 - URL: http://localhost:8000/admin.html
 - Set a unique admin username and password before first use (no default credentials provided)
+- Store them in backend configuration (for example, `backend/.env` with `ADMIN_USERNAME` and `ADMIN_PASSWORD`)
 
 ---
 

@@ -43,10 +43,13 @@ http-server
 - Main App: http://localhost:8000
 - Admin Panel: http://localhost:8000/admin.html
 
-### Step 5: Login to Admin
+### Step 5: Configure Admin Credentials
+- Set your admin username and password in backend configuration (for example, create `backend/.env` with `ADMIN_USERNAME` and `ADMIN_PASSWORD`)
+
+### Step 6: Login to Admin
 - Use the admin username and password you configured (no default credentials)
 
-### Step 6: Add Sample Products
+### Step 7: Add Sample Products
 Click "Add Product" and add:
 
 **Product 1:**
