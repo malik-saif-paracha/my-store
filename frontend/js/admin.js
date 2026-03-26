@@ -117,7 +117,7 @@ async function loadProducts() {
       })
       .join('');
   } catch (err) {
-    tbody.innerHTML = `<tr><td colspan="6" style="text-align:center;color:red;padding:30px">${err.message}</td></tr>`;
+    tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;padding:30px">No products found. Add one!</td></tr>';
   }
 }
 
@@ -234,7 +234,7 @@ async function loadOrders() {
     const orders = await res.json();
     renderOrdersTable(orders, 'orders-table');
   } catch (err) {
-    tbody.innerHTML = `<tr><td colspan="7" style="text-align:center;color:red;padding:30px">${err.message}</td></tr>`;
+    tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:30px">No orders yet.</td></tr>';
   }
 }
 
