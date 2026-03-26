@@ -57,7 +57,7 @@ my-store/
 - ✅ Edit products
 - ✅ Delete products
 - ✅ View all orders
-- ✅ Simple hardcoded login (username: admin, password: admin123)
+- ✅ Admin login secured with user-configured credentials (no default passwords)
 
 ## Prerequisites
 
@@ -175,8 +175,7 @@ Server is running on http://localhost:5000
 ## Admin Login
 
 **URL**: http://localhost:8000/admin.html
-- **Username**: admin
-- **Password**: admin123
+- Configure your own admin username and password before first use (no default credentials are provided).
 
 ## How to Use
 
@@ -192,7 +191,7 @@ Server is running on http://localhost:5000
 
 ### As an Admin:
 1. Go to Admin page
-2. Login with credentials (admin/admin123)
+2. Login with your configured admin credentials
 3. **Products Tab**: 
    - Add new products using the form
    - Edit product names/prices by clicking Edit

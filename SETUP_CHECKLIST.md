@@ -70,9 +70,7 @@
 ### Step 8: Test Admin Panel
 - [ ] Click "Admin" in navigation
 - [ ] See admin login form ✅
-- [ ] Login with:
-  - [ ] Username: `admin`
-  - [ ] Password: `admin123`
+- [ ] Log in with your configured admin credentials
 - [ ] Clicked login, see admin dashboard ✅
 - [ ] Can switch between Products and Orders tabs ✅
 
@@ -154,7 +152,7 @@
 
 ### Step 15: Test Admin Orders
 - [ ] Go to http://localhost:8000/admin.html
-- [ ] Login (admin/admin123)
+- [ ] Log in with your configured admin credentials
 - [ ] Click "Orders" tab
 - [ ] Your order appears in list ✅
 - [ ] Shows customer name and email ✅
@@ -221,7 +219,7 @@
 - [ ] Restart MongoDB
 
 ### Issue: Admin Login Fails
-- [ ] Check credentials: admin / admin123
+- [ ] Verify your configured admin credentials
 - [ ] Clear browser cookies
 - [ ] Try incognito mode
 - [ ] Check console for errors

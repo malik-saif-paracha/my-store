@@ -130,7 +130,7 @@ if %all_good% EQU 1 (
     echo.
     echo Then open browser: http://localhost:8000
     echo Admin panel: http://localhost:8000/admin.html
-    echo Admin Login: admin / admin123
+    echo Admin Login: configure your own admin username/password (no default credentials)
     echo.
 ) else (
     echo [WARNING] Some components are missing!

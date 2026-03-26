@@ -178,15 +178,13 @@ Available on:
 
 2. **Admin Panel**
    - Go to: http://localhost:8000/admin.html
-   - Login credentials:
-     - Username: `admin`
-     - Password: `admin123`
+   - Configure your own admin username and password before first use (no default credentials)
 
 ### Initial Setup - Add Sample Products
 
 1. Go to Admin Panel (http://localhost:8000/admin.html)
 2. Click login button
-3. Enter credentials (admin/admin123)
+3. Enter your configured admin credentials
 4. Go to "Products" tab
 5. Fill the form and add products:
 
@@ -276,7 +274,7 @@ Description: Comfortable blue romper suit for active baby boys
 
 1. **View Orders**
    - Go to Admin (http://localhost:8000/admin.html)
-   - Login with admin/admin123
+   - Login with your configured admin credentials
    - Click "Orders" tab
    - ✅ Should see your order with customer info
 
@@ -361,9 +359,7 @@ lsof -ti:5000 | xargs kill -9
 ### Issue: Admin login doesn't work
 
 **Solution:**
-- Default credentials are case-sensitive:
-  - Username: `admin` (lowercase)
-  - Password: `admin123` (lowercase, with number 1 not L)
+- Confirm you have set your own admin username and password (there are no default credentials)
 - Check browser console for errors
 - Make sure you're on admin.html page
 

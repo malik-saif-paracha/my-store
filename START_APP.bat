@@ -58,8 +58,7 @@ echo Admin:    http://localhost:8000/admin.html
 echo Backend:  http://localhost:5000
 echo.
 echo Admin Login:
-echo   Username: admin
-echo   Password: admin123
+echo   Configure your own admin username and password before first run. No default credentials are provided.
 echo.
 echo If pages don't load:
 echo 1. Wait 10 seconds for mongodb connection

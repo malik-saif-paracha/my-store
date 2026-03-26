@@ -44,8 +44,7 @@ http-server
 - Admin Panel: http://localhost:8000/admin.html
 
 ### Step 5: Login to Admin
-- Username: `admin`
-- Password: `admin123`
+- Use the admin username and password you configured (no default credentials)
 
 ### Step 6: Add Sample Products
 Click "Add Product" and add:
@@ -81,7 +80,7 @@ Click "Add Product" and add:
 | "Cannot GET /api/products" | Backend not running. Run `npm start` in backend folder |
 | Products not loading | Wait 5 seconds for MongoDB connection. Refresh page |
 | Cart not working | Enable JavaScript and Local Storage in browser |
-| Admin login fails | Use: username `admin` password `admin123` |
+| Admin login fails | Verify your configured admin credentials and that you're on admin.html |
 | Port 8000 already in use? | Use different port: `python -m http.server 8001` |
 
 ## Project Files

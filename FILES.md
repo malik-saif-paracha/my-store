@@ -226,7 +226,7 @@ new/
 
 ### Admin Journey (Frontend)
 1. Admin opens `admin.html`
-2. Admin logs in (admin/admin123)
+2. Admin logs in with their configured credentials (no default provided)
 3. Admin can add/edit/delete products using forms
 4. Admin can view all orders in "Orders" tab
 5. All operations use Fetch API to communicate with backend

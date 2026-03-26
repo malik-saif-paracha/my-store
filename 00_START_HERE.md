@@ -81,7 +81,7 @@ Open: http://localhost:8000
 
 ### 1. Admin Setup
 - Go to: http://localhost:8000/admin.html
-- Login: `admin` / `admin123`
+- Login with your configured admin credentials
 - Click "Products" tab
 
 ### 2. Add Product
@@ -183,7 +183,7 @@ Then open: http://localhost:8000
 | Port 8000 in use? | Use different port: `python -m http.server 8001` |
 | Port 5000 in use? | Change port in backend/server.js line 30 |
 | Products not loading? | Wait 5 secs, refresh page, check console (F12) |
-| Admin login fails? | Use: `admin` for username, `admin123` for password |
+| Admin login fails? | Confirm you've configured admin credentials and are on admin.html |
 
 ---
 
@@ -191,8 +191,7 @@ Then open: http://localhost:8000
 
 **Admin Panel:**
 - URL: http://localhost:8000/admin.html
-- Username: `admin`
-- Password: `admin123`
+- Set a unique admin username and password before first use (no default credentials provided)
 
 ---
 
@@ -258,7 +257,7 @@ Everything is ready to go. Just:
 
 ### Admin Panel:
 - http://localhost:8000/admin.html
-- Login: admin / admin123
+- Login with your configured admin credentials
 
 ---
 
@@ -288,7 +287,7 @@ Everything is ready to go. Just:
 - [ ] Backend running (see "Connected to MongoDB")
 - [ ] Frontend running (see "Serving HTTP")
 - [ ] Can open http://localhost:8000
-- [ ] Can login to admin (admin/admin123)
+- [ ] Can log in to admin with your configured credentials
 - [ ] Can add product
 - [ ] Can view product
 - [ ] Can add to cart

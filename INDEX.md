@@ -118,7 +118,7 @@ my-store/
 
 ---
 
-## 🎯 Admin Features (Login: admin/admin123)
+## 🎯 Admin Features
 
 ### Product Management
 - ✅ Add new products (name, price, category, image, description)
@@ -206,7 +206,7 @@ DELETE /api/orders/:id                # Delete order
 5. **Open in Browser**
    - Main app: http://localhost:8000
    - Admin: http://localhost:8000/admin.html
-   - Admin Login: username: `admin`, password: `admin123`
+   - Admin Login: use the admin credentials you configure (no default credentials)
 
 ### Adding Products:
 
@@ -263,8 +263,8 @@ DELETE /api/orders/:id                # Delete order
 4. Verify backend is running
 
 ### Admin login fails?
-1. Use exact credentials: `admin` / `admin123`
-2. Make sure you're on admin.html page
+1. Make sure you've configured admin credentials (no default user exists)
+2. Confirm you're on admin.html page
 3. Check cookies are enabled
 
 ### Cart not working?
