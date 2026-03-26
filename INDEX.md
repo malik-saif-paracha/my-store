@@ -116,9 +116,8 @@ my-store/
 └── start_app.sh                # Mac/Linux startup
 ```
 
----
 
-## 🎯 Admin Features (Login: admin/admin123)
+## 🎯 Admin Features (configure your own credentials)
 
 ### Product Management
 - ✅ Add new products (name, price, category, image, description)
@@ -206,7 +205,7 @@ DELETE /api/orders/:id                # Delete order
 5. **Open in Browser**
    - Main app: http://localhost:8000
    - Admin: http://localhost:8000/admin.html
-   - Admin Login: username: `admin`, password: `admin123`
+   - Admin Login: use the admin credentials you configure (no defaults are provided)
 
 ### Adding Products:
 
@@ -263,7 +262,7 @@ DELETE /api/orders/:id                # Delete order
 4. Verify backend is running
 
 ### Admin login fails?
-1. Use exact credentials: `admin` / `admin123`
+1. Make sure you set your own admin username/password and use the same values when logging in
 2. Make sure you're on admin.html page
 3. Check cookies are enabled
 

@@ -57,7 +57,7 @@ my-store/
 - ✅ Edit products
 - ✅ Delete products
 - ✅ View all orders
-- ✅ Simple hardcoded login (username: admin, password: admin123)
+- ✅ Admin access (configure your own secure credentials)
 
 ## Prerequisites
 
@@ -174,9 +174,8 @@ Server is running on http://localhost:5000
 
 ## Admin Login
 
-**URL**: http://localhost:8000/admin.html
-- **Username**: admin
-- **Password**: admin123
+**URL**: http://localhost:8000/admin.html  
+**Credentials**: Set your own admin username and password. No default credentials are provided for security—configure authentication before using the admin area. Create a `backend/.env` file with `ADMIN_USERNAME` and `ADMIN_PASSWORD`, then restart the backend before logging in.
 
 ## How to Use
 
@@ -192,7 +191,7 @@ Server is running on http://localhost:5000
 
 ### As an Admin:
 1. Go to Admin page
-2. Login with credentials (admin/admin123)
+2. Login with your configured admin credentials
 3. **Products Tab**: 
    - Add new products using the form
    - Edit product names/prices by clicking Edit
@@ -254,6 +253,8 @@ Server is running on http://localhost:5000
 Create a `.env` file in the backend folder (optional):
 ```
 MONGODB_URI=mongodb://localhost:27017/mystore
+ADMIN_USERNAME=<your_admin_username>
+ADMIN_PASSWORD=<your_strong_password>
 ```
 
 If using MongoDB Atlas (cloud):
