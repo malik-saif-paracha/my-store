@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Store – Cosmetics & Baby Dresses</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="navbar-brand">🛍️ <span>My Store</span></a>
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="navbar-nav">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li>
+          <a href="cart.html" class="cart-icon" aria-label="Cart">
+            🛒
+            <span class="cart-badge" style="display:none">0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Welcome to My Store 🌸</h1>
+    <p>Discover our curated collection of cosmetics and adorable baby dresses.</p>
+    <a href="products.html" class="btn btn-primary">Shop Now</a>
+    &nbsp;
+    <a href="products.html?category=Cosmetics" class="btn btn-outline">Browse Cosmetics</a>
+  </section>
+
+  <!-- Categories -->
+  <section style="background:#fff;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Shop by Category</h2>
+        <p>Choose from our two beautiful collections</p>
+        <div class="underline"></div>
+      </div>
+      <div class="categories-grid">
+        <!-- Cosmetics -->
+        <div class="category-card cosmetics" onclick="window.location.href='products.html?category=Cosmetics'">
+          <div class="category-img">💄</div>
+          <div class="category-info">
+            <h3>Cosmetics</h3>
+            <p>Lipsticks, foundations, skincare essentials, and more. Look and feel your best every day.</p>
+            <span class="btn btn-dark">Explore Cosmetics</span>
+          </div>
+        </div>
+
+        <!-- Baby Dresses -->
+        <div class="category-card baby" onclick="window.location.href='products.html?category=Baby Dresses'">
+          <div class="category-img">👶</div>
+          <div class="category-info">
+            <h3>Baby Dresses</h3>
+            <p>Soft, comfortable, and stylish outfits for your little one. Made with love and care.</p>
+            <span class="btn btn-dark">Explore Baby Dresses</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>Featured Products</h2>
+        <p>Handpicked just for you</p>
+        <div class="underline"></div>
+      </div>
+      <div class="products-grid" id="featured-products">
+        <div class="loading-wrapper"><div class="spinner"></div></div>
+      </div>
+      <div class="text-center mt-20">
+        <a href="products.html" class="btn btn-dark">View All Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 My Store. Made with ❤️ | <a href="admin/login.html">Admin Panel</a></p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
