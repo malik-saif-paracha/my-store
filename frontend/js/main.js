@@ -31,9 +31,21 @@ async function loadFeaturedProducts() {
       .map(buildProductCard)
       .join('');
   } catch (err) {
-    grid.innerHTML = `
-      <div class="text-center" style="grid-column:1/-1;padding:40px;">
-        <p style="color:#636e72;">Unable to load products. Make sure the backend server is running.</p>
-      </div>`;
+    // Backend unavailable – show demo products (works on GitHub Pages)
+    if (typeof DEMO_PRODUCTS === 'undefined') {
+      console.warn('DEMO_PRODUCTS not loaded – check that js/data.js is included before this script.');
+    }
+    const products = typeof DEMO_PRODUCTS !== 'undefined' ? DEMO_PRODUCTS : [];
+    if (products.length === 0) {
+      grid.innerHTML = `
+        <div class="text-center" style="grid-column:1/-1;padding:40px;">
+          <p style="color:#636e72;">No products available yet. Check back soon!</p>
+        </div>`;
+      return;
+    }
+    grid.innerHTML = products
+      .slice(0, 8)
+      .map(buildProductCard)
+      .join('');
   }
 }

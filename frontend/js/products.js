@@ -35,10 +35,12 @@ async function loadProducts() {
     allProducts = await res.json();
     filterProducts();
   } catch {
-    grid.innerHTML = `
-      <div class="text-center" style="grid-column:1/-1;padding:60px;">
-        <p>⚠️ Could not load products. Make sure the backend is running on port 5000.</p>
-      </div>`;
+    // Backend unavailable – use demo products (works on GitHub Pages)
+    if (typeof DEMO_PRODUCTS === 'undefined') {
+      console.warn('DEMO_PRODUCTS not loaded – check that js/data.js is included before this script.');
+    }
+    allProducts = typeof DEMO_PRODUCTS !== 'undefined' ? DEMO_PRODUCTS : [];
+    filterProducts();
   }
 }
 
